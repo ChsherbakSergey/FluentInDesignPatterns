@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  FluentInDesignPatterns
 //
-//  Created by Sergey on 6/5/21.
+//  Created by Sergey Chsherbak on 6/5/21.
 //
 
 import UIKit

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class SingletonCoordinator: Coordinatable {
     
@@ -16,14 +17,53 @@ final class SingletonCoordinator: Coordinatable {
     }
     
     func start() {
-        let vc = SingletonViewController()
+        if AuthManager.shared.isSignedIn {
+            guard let username = AuthManager.shared.username else {
+                pushHomeVC(username: "Stranger")
+                return
+            }
+            pushHomeVC(username: username)
+        } else {
+            pushAuthorizationVC()
+        }
+    }
+    
+    //MARK: - Push Methods
+    func pushAuthorizationVC() {
+        let vc = AuthorizationViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
+        if navigationController.viewControllers.count > 1 {
+            navigationController.viewControllers = [vc]
+        }
+    }
+    
+    func pushHomeVC(username: String) {
+        let vc = HomeViewController(username: username)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+        if navigationController.viewControllers.count > 1 {
+            navigationController.viewControllers = [vc]
+        }
+    }
+    
+    func pushExplanationVC() {
+        let vc = SingletonExplanationViewController()
+        vc.coordinator = self
+        vc.navigationItem.largeTitleDisplayMode = .never
+        
+//        let backButton = UIBarButtonItem()
+//        backButton.tintColor = .white
+//        backButton.title = ""
+//        vc.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
+        navigationController.pushViewController(vc, animated: true)
     }
     
     //MARK: - Present Methods
-    
-    
-    //MARK: - Dismiss Methods
-    
+    func presentTwitterVC(with url: URL?) {
+        guard let url = url else { return }
+        let vc = SFSafariViewController(url: url)
+        navigationController.present(vc, animated: true)
+    }
 }
