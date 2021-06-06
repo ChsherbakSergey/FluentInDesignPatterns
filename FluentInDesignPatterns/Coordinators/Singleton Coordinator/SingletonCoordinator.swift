@@ -51,12 +51,6 @@ final class SingletonCoordinator: Coordinatable {
         let vc = SingletonExplanationViewController()
         vc.coordinator = self
         vc.navigationItem.largeTitleDisplayMode = .never
-        
-//        let backButton = UIBarButtonItem()
-//        backButton.tintColor = .white
-//        backButton.title = ""
-//        vc.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        
         navigationController.pushViewController(vc, animated: true)
     }
     

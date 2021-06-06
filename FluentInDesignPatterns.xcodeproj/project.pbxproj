@@ -17,7 +17,6 @@
 		A54E9759266B772500C9CE56 /* CoordinatorConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E9758266B772500C9CE56 /* CoordinatorConfigurator.swift */; };
 		A54E975D266B78AD00C9CE56 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E975C266B78AD00C9CE56 /* AuthorizationViewController.swift */; };
 		A54E9767266B7E8100C9CE56 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E9766266B7E8100C9CE56 /* MainCoordinator.swift */; };
-		A54E976D266B900C00C9CE56 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E976C266B900C00C9CE56 /* AuthManager.swift */; };
 		A54E9777266B90FE00C9CE56 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E9776266B90FE00C9CE56 /* HomeViewController.swift */; };
 		A54E977B266B95FB00C9CE56 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E977A266B95FB00C9CE56 /* UIView.swift */; };
 		A54E9780266B96F300C9CE56 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E977F266B96F300C9CE56 /* BounceButton.swift */; };
@@ -29,6 +28,7 @@
 		A5633EEF266CD88A00AD9528 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EEE266CD88A00AD9528 /* UIFont.swift */; };
 		A5633EF2266CDD4A00AD9528 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EF1266CDD4A00AD9528 /* UILabel.swift */; };
 		A5633EF8266CF0D700AD9528 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EF7266CF0D700AD9528 /* URLConstants.swift */; };
+		A5633EFE266CF65A00AD9528 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EFD266CF65A00AD9528 /* AuthManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,6 @@
 		A54E9758266B772500C9CE56 /* CoordinatorConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorConfigurator.swift; sourceTree = "<group>"; };
 		A54E975C266B78AD00C9CE56 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		A54E9766266B7E8100C9CE56 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		A54E976C266B900C00C9CE56 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A54E9776266B90FE00C9CE56 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A54E977A266B95FB00C9CE56 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		A54E977F266B96F300C9CE56 /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		A5633EEE266CD88A00AD9528 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		A5633EF1266CDD4A00AD9528 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		A5633EF7266CF0D700AD9528 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		A5633EFD266CF65A00AD9528 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +166,7 @@
 		A54E975B266B788B00C9CE56 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				A54E976B266B8FF900C9CE56 /* Managers */,
+				A5633EFC266CF64A00AD9528 /* Managers */,
 				A54E976A266B8FE900C9CE56 /* Screens */,
 			);
 			path = Singleton;
@@ -188,14 +188,6 @@
 				A54E976F266B901200C9CE56 /* Authorization Screen */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		A54E976B266B8FF900C9CE56 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				A54E976C266B900C00C9CE56 /* AuthManager.swift */,
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		A54E976F266B901200C9CE56 /* Authorization Screen */ = {
@@ -291,6 +283,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		A5633EFC266CF64A00AD9528 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A5633EFD266CF65A00AD9528 /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,7 +362,6 @@
 			files = (
 				A54E9730266B6F3C00C9CE56 /* MainViewController.swift in Sources */,
 				A5633EF8266CF0D700AD9528 /* URLConstants.swift in Sources */,
-				A54E976D266B900C00C9CE56 /* AuthManager.swift in Sources */,
 				A54E977B266B95FB00C9CE56 /* UIView.swift in Sources */,
 				A54E9767266B7E8100C9CE56 /* MainCoordinator.swift in Sources */,
 				A54E974E266B75A800C9CE56 /* Coordinatable.swift in Sources */,
@@ -370,6 +369,7 @@
 				A5633EEC266CD4C900AD9528 /* UIColor.swift in Sources */,
 				A5633EF2266CDD4A00AD9528 /* UILabel.swift in Sources */,
 				A54E975D266B78AD00C9CE56 /* AuthorizationViewController.swift in Sources */,
+				A5633EFE266CF65A00AD9528 /* AuthManager.swift in Sources */,
 				A5633EEF266CD88A00AD9528 /* UIFont.swift in Sources */,
 				A54E9783266B9BDE00C9CE56 /* UIViewController.swift in Sources */,
 				A54E9777266B90FE00C9CE56 /* HomeViewController.swift in Sources */,
