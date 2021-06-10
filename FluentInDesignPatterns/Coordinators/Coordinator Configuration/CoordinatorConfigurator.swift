@@ -14,10 +14,14 @@ final class CoordinatorConfigurator {
     /// This methods return a coordinator based on which scheme is used
     func setupInitialCoordinator() -> Coordinatable {
         
+        let navigationController: UINavigationController = UINavigationController()
+        
         #if SINGLETON
-        return SingletonCoordinator(navigationController: UINavigationController())
+        return SingletonCoordinator(navigationController: navigationController)
+        #elseif STATE
+        return StateCoordinator(navigationController: navigationController)
         #else
-        return MainCoordinator(navigationController: UINavigationController())
+        return MainCoordinator(navigationController: navigationController)
         #endif
     }
     

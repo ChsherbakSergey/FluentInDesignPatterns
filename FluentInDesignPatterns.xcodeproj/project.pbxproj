@@ -29,6 +29,18 @@
 		A5633EF2266CDD4A00AD9528 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EF1266CDD4A00AD9528 /* UILabel.swift */; };
 		A5633EF8266CF0D700AD9528 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EF7266CF0D700AD9528 /* URLConstants.swift */; };
 		A5633EFE266CF65A00AD9528 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EFD266CF65A00AD9528 /* AuthManager.swift */; };
+		A56C0B9326712F40006AA173 /* StateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0B9226712F40006AA173 /* StateCoordinator.swift */; };
+		A56C0B9926712FEE006AA173 /* SearchMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0B9826712FEE006AA173 /* SearchMessageViewController.swift */; };
+		A56C0B9D26713012006AA173 /* SearchMessageViewController + State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0B9C26713012006AA173 /* SearchMessageViewController + State.swift */; };
+		A56C0BA126713089006AA173 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BA026713089006AA173 /* Message.swift */; };
+		A56C0BAF2671432E006AA173 /* InitialStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BAE2671432E006AA173 /* InitialStateTableViewCell.swift */; };
+		A56C0BB426714BF6006AA173 /* LoadingStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BB326714BF6006AA173 /* LoadingStateTableViewCell.swift */; };
+		A56C0BBE267157BB006AA173 /* ErrorStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BBD267157BB006AA173 /* ErrorStateTableViewCell.swift */; };
+		A56C0BC126715950006AA173 /* NotFoundStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BC026715950006AA173 /* NotFoundStateTableViewCell.swift */; };
+		A56C0BC626715A7E006AA173 /* SearchMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BC526715A7E006AA173 /* SearchMessagePresenter.swift */; };
+		A56C0BC926715C5B006AA173 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BC826715C5B006AA173 /* MessageTableViewCell.swift */; };
+		A56C0BCD26715DB7006AA173 /* MessageTableViewCellInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BCC26715DB7006AA173 /* MessageTableViewCellInterface.swift */; };
+		A56C0BD126715E18006AA173 /* MessageTableViewCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C0BD026715E18006AA173 /* MessageTableViewCellConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +68,18 @@
 		A5633EF1266CDD4A00AD9528 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		A5633EF7266CF0D700AD9528 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		A5633EFD266CF65A00AD9528 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		A56C0B9226712F40006AA173 /* StateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCoordinator.swift; sourceTree = "<group>"; };
+		A56C0B9826712FEE006AA173 /* SearchMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMessageViewController.swift; sourceTree = "<group>"; };
+		A56C0B9C26713012006AA173 /* SearchMessageViewController + State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchMessageViewController + State.swift"; sourceTree = "<group>"; };
+		A56C0BA026713089006AA173 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A56C0BAE2671432E006AA173 /* InitialStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialStateTableViewCell.swift; sourceTree = "<group>"; };
+		A56C0BB326714BF6006AA173 /* LoadingStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateTableViewCell.swift; sourceTree = "<group>"; };
+		A56C0BBD267157BB006AA173 /* ErrorStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateTableViewCell.swift; sourceTree = "<group>"; };
+		A56C0BC026715950006AA173 /* NotFoundStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundStateTableViewCell.swift; sourceTree = "<group>"; };
+		A56C0BC526715A7E006AA173 /* SearchMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMessagePresenter.swift; sourceTree = "<group>"; };
+		A56C0BC826715C5B006AA173 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		A56C0BCC26715DB7006AA173 /* MessageTableViewCellInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCellInterface.swift; sourceTree = "<group>"; };
+		A56C0BD026715E18006AA173 /* MessageTableViewCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCellConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +147,7 @@
 		A54E9749266B737000C9CE56 /* Design Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				A56C0B9626712F8D006AA173 /* State */,
 				A54E975B266B788B00C9CE56 /* Singleton */,
 			);
 			path = "Design Patterns";
@@ -131,6 +156,7 @@
 		A54E974C266B753A00C9CE56 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				A56C0B9126712F28006AA173 /* State Coordinator */,
 				A54E9751266B75F000C9CE56 /* Protocol */,
 				A54E9757266B770200C9CE56 /* Coordinator Configuration */,
 				A54E9765266B7E7300C9CE56 /* Main Coordinator */,
@@ -291,6 +317,136 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		A56C0B9126712F28006AA173 /* State Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0B9226712F40006AA173 /* StateCoordinator.swift */,
+			);
+			path = "State Coordinator";
+			sourceTree = "<group>";
+		};
+		A56C0B9626712F8D006AA173 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BA82671427D006AA173 /* TableView Cells */,
+				A56C0BA32671308D006AA173 /* Models */,
+				A56C0B9B26712FF4006AA173 /* State */,
+				A56C0B9726712F9C006AA173 /* Screens */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A56C0B9726712F9C006AA173 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BC426715A66006AA173 /* Presenter */,
+				A56C0BC326715A5B006AA173 /* Controller */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A56C0B9B26712FF4006AA173 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0B9C26713012006AA173 /* SearchMessageViewController + State.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		A56C0BA32671308D006AA173 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BA026713089006AA173 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A56C0BA82671427D006AA173 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BAD267142AD006AA173 /* ShowingDataState Cell */,
+				A56C0BAC267142A3006AA173 /* NotFoundState Cell */,
+				A56C0BAB2671429C006AA173 /* ErrorState Cell */,
+				A56C0BAA26714293006AA173 /* LoadingState Cell */,
+				A56C0BA926714287006AA173 /* InitialState Cell */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		A56C0BA926714287006AA173 /* InitialState Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BAE2671432E006AA173 /* InitialStateTableViewCell.swift */,
+			);
+			path = "InitialState Cell";
+			sourceTree = "<group>";
+		};
+		A56C0BAA26714293006AA173 /* LoadingState Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BB326714BF6006AA173 /* LoadingStateTableViewCell.swift */,
+			);
+			path = "LoadingState Cell";
+			sourceTree = "<group>";
+		};
+		A56C0BAB2671429C006AA173 /* ErrorState Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BBD267157BB006AA173 /* ErrorStateTableViewCell.swift */,
+			);
+			path = "ErrorState Cell";
+			sourceTree = "<group>";
+		};
+		A56C0BAC267142A3006AA173 /* NotFoundState Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BC026715950006AA173 /* NotFoundStateTableViewCell.swift */,
+			);
+			path = "NotFoundState Cell";
+			sourceTree = "<group>";
+		};
+		A56C0BAD267142AD006AA173 /* ShowingDataState Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BCF26715E05006AA173 /* Configurator */,
+				A56C0BCB26715DA9006AA173 /* Protocol */,
+				A56C0BC826715C5B006AA173 /* MessageTableViewCell.swift */,
+			);
+			path = "ShowingDataState Cell";
+			sourceTree = "<group>";
+		};
+		A56C0BC326715A5B006AA173 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0B9826712FEE006AA173 /* SearchMessageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A56C0BC426715A66006AA173 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BC526715A7E006AA173 /* SearchMessagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A56C0BCB26715DA9006AA173 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BCC26715DB7006AA173 /* MessageTableViewCellInterface.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A56C0BCF26715E05006AA173 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BD026715E18006AA173 /* MessageTableViewCellConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,7 +516,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56C0BC626715A7E006AA173 /* SearchMessagePresenter.swift in Sources */,
+				A56C0B9926712FEE006AA173 /* SearchMessageViewController.swift in Sources */,
+				A56C0BC926715C5B006AA173 /* MessageTableViewCell.swift in Sources */,
 				A54E9730266B6F3C00C9CE56 /* MainViewController.swift in Sources */,
+				A56C0B9326712F40006AA173 /* StateCoordinator.swift in Sources */,
 				A5633EF8266CF0D700AD9528 /* URLConstants.swift in Sources */,
 				A54E977B266B95FB00C9CE56 /* UIView.swift in Sources */,
 				A54E9767266B7E8100C9CE56 /* MainCoordinator.swift in Sources */,
@@ -368,17 +528,25 @@
 				A54E9780266B96F300C9CE56 /* BounceButton.swift in Sources */,
 				A5633EEC266CD4C900AD9528 /* UIColor.swift in Sources */,
 				A5633EF2266CDD4A00AD9528 /* UILabel.swift in Sources */,
+				A56C0BB426714BF6006AA173 /* LoadingStateTableViewCell.swift in Sources */,
 				A54E975D266B78AD00C9CE56 /* AuthorizationViewController.swift in Sources */,
+				A56C0BD126715E18006AA173 /* MessageTableViewCellConfigurator.swift in Sources */,
+				A56C0BCD26715DB7006AA173 /* MessageTableViewCellInterface.swift in Sources */,
 				A5633EFE266CF65A00AD9528 /* AuthManager.swift in Sources */,
+				A56C0B9D26713012006AA173 /* SearchMessageViewController + State.swift in Sources */,
 				A5633EEF266CD88A00AD9528 /* UIFont.swift in Sources */,
 				A54E9783266B9BDE00C9CE56 /* UIViewController.swift in Sources */,
 				A54E9777266B90FE00C9CE56 /* HomeViewController.swift in Sources */,
 				A54E972C266B6F3C00C9CE56 /* AppDelegate.swift in Sources */,
 				A5633EE8266CD00900AD9528 /* SingletoneExplanation.swift in Sources */,
 				A54E972E266B6F3C00C9CE56 /* SceneDelegate.swift in Sources */,
+				A56C0BAF2671432E006AA173 /* InitialStateTableViewCell.swift in Sources */,
 				A54E978B266BBF9000C9CE56 /* AlertFactory.swift in Sources */,
+				A56C0BC126715950006AA173 /* NotFoundStateTableViewCell.swift in Sources */,
 				A54E9755266B761B00C9CE56 /* SingletonCoordinator.swift in Sources */,
+				A56C0BA126713089006AA173 /* Message.swift in Sources */,
 				A54E9787266BA7CE00C9CE56 /* SingletonExplanationViewController.swift in Sources */,
+				A56C0BBE267157BB006AA173 /* ErrorStateTableViewCell.swift in Sources */,
 				A54E9759266B772500C9CE56 /* CoordinatorConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +874,161 @@
 			};
 			name = ReleaseSingleton;
 		};
+		A56C0B8826712E59006AA173 /* Debug State */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG STATE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug State";
+		};
+		A56C0B8926712E59006AA173 /* Debug State */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUF6JQVK4V;
+				INFOPLIST_FILE = FluentInDesignPatterns/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chsherbaksergey.FluentInDesignPatterns;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug State";
+		};
+		A56C0B8A26712E62006AA173 /* Release State */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STATE;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release State";
+		};
+		A56C0B8B26712E62006AA173 /* Release State */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GUF6JQVK4V;
+				INFOPLIST_FILE = FluentInDesignPatterns/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chsherbaksergey.FluentInDesignPatterns;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release State";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -713,8 +1036,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A54E973A266B6F3F00C9CE56 /* Debug */,
+				A56C0B8826712E59006AA173 /* Debug State */,
 				A54E9740266B702900C9CE56 /* DebugSingleton */,
 				A54E973B266B6F3F00C9CE56 /* Release */,
+				A56C0B8A26712E62006AA173 /* Release State */,
 				A54E9744266B729400C9CE56 /* ReleaseSingleton */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -724,8 +1049,10 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A54E973D266B6F3F00C9CE56 /* Debug */,
+				A56C0B8926712E59006AA173 /* Debug State */,
 				A54E9741266B702900C9CE56 /* DebugSingleton */,
 				A54E973E266B6F3F00C9CE56 /* Release */,
+				A56C0B8B26712E62006AA173 /* Release State */,
 				A54E9745266B729400C9CE56 /* ReleaseSingleton */,
 			);
 			defaultConfigurationIsVisible = 0;
