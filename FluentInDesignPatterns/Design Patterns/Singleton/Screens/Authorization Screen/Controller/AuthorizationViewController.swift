@@ -10,33 +10,9 @@ import UIKit
 final class AuthorizationViewController: UIViewController {
     
     //MARK: - UI Elements
-    private lazy var usernameTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = .roundedRect
-        textField.backgroundColor = .quaternarySystemFill
-        textField.textAlignment = .center
-        textField.font = .systemFont(ofSize: 16.0, weight: .medium)
-        textField.placeholder = "Create your username..."
-        textField.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        return textField
-    }()
-    
-    private lazy var signInButton: BounceButton = {
-        let button = BounceButton(type: .system)
-        button.setTitle("Sign In", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
-        button.setTitleColor(.systemBackground, for: .normal)
-        button.backgroundColor = .label
-        button.layer.cornerRadius = 12.0
-        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        return button
-    }()
-    
-    private lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let view = UIActivityIndicatorView(style: .medium)
-        view.color = .systemGray
-        return view
-    }()
+    private lazy var usernameTextField: UITextField = makeUsernameTextField()
+    private lazy var signInButton: UIButton = makeSignInButton()
+    private lazy var activityIndicatorView: UIActivityIndicatorView = makeActivityIndicatorView()
     
     //MARK: - Properties
     weak var coordinator: SingletonCoordinator?

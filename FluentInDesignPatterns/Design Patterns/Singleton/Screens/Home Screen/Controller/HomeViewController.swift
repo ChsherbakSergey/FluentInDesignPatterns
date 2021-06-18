@@ -10,51 +10,10 @@ import UIKit
 final class HomeViewController: UIViewController {
     
     //MARK: - UI Elements
-    private lazy var greetingLabel: UILabel = {
-        let label = UILabel()
-        label.alpha = 0.0
-        label.text = "Hello, \(username) 👋🏽"
-        label.textColor = .label
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 32.0, weight: .bold)
-        label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.75
-        label.numberOfLines = 1
-        return label
-    }()
-    
-    private lazy var explainButton: BounceButton = {
-        let button = BounceButton(type: .system)
-        button.alpha = 0.0
-        button.setTitle("Singleton Explanation", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
-        button.setTitleColor(.systemBackground, for: .normal)
-        button.backgroundColor = .label
-        button.layer.cornerRadius = 12.0
-        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        return button
-    }()
-    
-    private lazy var logOutButton: BounceButton = {
-        let button = BounceButton(type: .system)
-        button.alpha = 0.0
-        button.setTitle("Log Out", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemRed
-        button.layer.cornerRadius = 12.0
-        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        return button
-    }()
-    
-    private lazy var buttonsStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [explainButton, logOutButton])
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.alignment = .fill
-        stackView.spacing = 8.0
-        return stackView
-    }()
+    private lazy var greetingLabel: UILabel = makeGreetingLabel()
+    private lazy var explainButton: UIButton = makeExplainButton()
+    private lazy var logOutButton: UIButton = makeLogOutButton()
+    private lazy var buttonsStackView: UIStackView = makeButtonsStackView(arrangedSubviews: [explainButton, logOutButton])
     
     //MARK: - Properties
     weak var coordinator: SingletonCoordinator?
@@ -116,6 +75,7 @@ private extension HomeViewController {
         layoutViews(in: view)
         addTargets()
         setNavigationBar()
+        setGreetingLabel(with: "Hello, \(username) 👋🏽")
     }
     
     func setNavigationBar() {
@@ -144,5 +104,9 @@ private extension HomeViewController {
     
     func animate(_ view: UIView) {
         UIView.animate(withDuration: 1.0) { view.alpha = 1.0 }
+    }
+    
+    func setGreetingLabel(with text: String) {
+        greetingLabel.text = text
     }
 }

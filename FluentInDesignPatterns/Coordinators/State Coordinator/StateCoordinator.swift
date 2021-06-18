@@ -17,12 +17,18 @@ final class StateCoordinator: Coordinatable {
     }
     
     func start() {
-        openSearchMessageViewController()
+        openSearchMessageVC()
     }
     
     //MARK: - Push Methods
-    private func openSearchMessageViewController() {
+    private func openSearchMessageVC() {
         let vc = SearchMessageViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    internal func openExplanationVC() {
+        let vc = StateExplanationViewController()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }

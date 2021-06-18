@@ -18,20 +18,9 @@ protocol SearchMessageViewControllerViewDelegate: class {
 final class SearchMessageViewController: UIViewController {
     
     //MARK: - UIElements
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(InitialStateTableViewCell.self, forCellReuseIdentifier: InitialStateTableViewCell.reuseIdentifier)
-        tableView.register(LoadingStateTableViewCell.self, forCellReuseIdentifier: LoadingStateTableViewCell.reuseIdentifier)
-        tableView.register(ErrorStateTableViewCell.self, forCellReuseIdentifier: ErrorStateTableViewCell.reuseIdentifier)
-        tableView.register(NotFoundStateTableViewCell.self, forCellReuseIdentifier: NotFoundStateTableViewCell.reuseIdentifier)
-        tableView.register(MessageTableViewCell.self, forCellReuseIdentifier: MessageTableViewCell.reuseIdentifier)
-        tableView.delegate = self
-        tableView.separatorStyle = .none
-        tableView.tableFooterView = UIView()
-        return tableView
-    }()
-    
+    lazy var tableView: UITableView = makeTableView()
     private lazy var searchController: UISearchController = UISearchController()
+    private lazy var explanationButton: UIButton = makeExplanationLabel()
     
     //MARK: - Properties
     weak var coordinator: StateCoordinator?
@@ -120,6 +109,10 @@ private extension SearchMessageViewController {
             self?.presenter.getMessagesWithError()
         }
     }
+    
+    @objc func handleExplanationButtonTapped(_ sender: UIButton) {
+        coordinator?.openExplanationVC()
+    }
 }
 
 //MARK: - SearchMessageViewController
@@ -128,6 +121,8 @@ private extension SearchMessageViewController {
     func setInitialUI() {
         view.backgroundColor = .systemBackground
         setupNavigationBar()
+        setDelegates()
+        addTargets()
         addViews(into: view)
         layoutViews(in: view)
     }
@@ -137,7 +132,6 @@ private extension SearchMessageViewController {
         setupRightNavigationButton()
         setupLeftNavigationButton()
         navigationItem.searchController = searchController
-        searchController.searchBar.delegate = self
     }
     
     func setupRightNavigationButton() {
@@ -152,8 +146,18 @@ private extension SearchMessageViewController {
         navigationItem.leftBarButtonItem = errorButton
     }
     
+    func setDelegates() {
+        tableView.delegate = self
+        searchController.searchBar.delegate = self
+    }
+    
+    func addTargets() {
+        explanationButton.addTarget(self, action: #selector(handleExplanationButtonTapped(_:)), for: .touchUpInside)
+    }
+    
     func addViews(into view: UIView) {
         view.addSubview(tableView)
+        view.addSubview(explanationButton)
     }
     
     func layoutViews(in view: UIView) {
@@ -161,5 +165,9 @@ private extension SearchMessageViewController {
                          left: view.leftAnchor,
                          bottom: view.bottomAnchor,
                          right: view.rightAnchor)
+        explanationButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                 right: view.rightAnchor,
+                                 paddingBottom: 52.0,
+                                 paddingRight: 32.0)
     }
 }

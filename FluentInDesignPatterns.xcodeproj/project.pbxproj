@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A54E6E66267D3B6E00D9DB54 /* AuthorizationViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E6E65267D3B6E00D9DB54 /* AuthorizationViewController + UI.swift */; };
+		A54E6E69267D3CEE00D9DB54 /* HomeViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E6E68267D3CEE00D9DB54 /* HomeViewController + UI.swift */; };
+		A54E6E6C267D3E9A00D9DB54 /* SingletonExplanationViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E6E6B267D3E9A00D9DB54 /* SingletonExplanationViewController + UI.swift */; };
+		A54E6E6F267D432800D9DB54 /* SearchMessageViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E6E6E267D432800D9DB54 /* SearchMessageViewController + UI.swift */; };
 		A54E972C266B6F3C00C9CE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E972B266B6F3C00C9CE56 /* AppDelegate.swift */; };
 		A54E972E266B6F3C00C9CE56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E972D266B6F3C00C9CE56 /* SceneDelegate.swift */; };
 		A54E9730266B6F3C00C9CE56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E972F266B6F3C00C9CE56 /* MainViewController.swift */; };
@@ -23,6 +27,7 @@
 		A54E9783266B9BDE00C9CE56 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E9782266B9BDE00C9CE56 /* UIViewController.swift */; };
 		A54E9787266BA7CE00C9CE56 /* SingletonExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E9786266BA7CE00C9CE56 /* SingletonExplanationViewController.swift */; };
 		A54E978B266BBF9000C9CE56 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E978A266BBF9000C9CE56 /* AlertFactory.swift */; };
+		A551135026729CAB00BE5C56 /* StateExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A551134F26729CAB00BE5C56 /* StateExplanationViewController.swift */; };
 		A5633EE8266CD00900AD9528 /* SingletoneExplanation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EE7266CD00900AD9528 /* SingletoneExplanation.swift */; };
 		A5633EEC266CD4C900AD9528 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EEB266CD4C900AD9528 /* UIColor.swift */; };
 		A5633EEF266CD88A00AD9528 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5633EEE266CD88A00AD9528 /* UIFont.swift */; };
@@ -44,6 +49,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A54E6E65267D3B6E00D9DB54 /* AuthorizationViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthorizationViewController + UI.swift"; sourceTree = "<group>"; };
+		A54E6E68267D3CEE00D9DB54 /* HomeViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController + UI.swift"; sourceTree = "<group>"; };
+		A54E6E6B267D3E9A00D9DB54 /* SingletonExplanationViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SingletonExplanationViewController + UI.swift"; sourceTree = "<group>"; };
+		A54E6E6E267D432800D9DB54 /* SearchMessageViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchMessageViewController + UI.swift"; sourceTree = "<group>"; };
 		A54E9728266B6F3C00C9CE56 /* FluentInDesignPatterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FluentInDesignPatterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54E972B266B6F3C00C9CE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54E972D266B6F3C00C9CE56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +71,7 @@
 		A54E9782266B9BDE00C9CE56 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A54E9786266BA7CE00C9CE56 /* SingletonExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonExplanationViewController.swift; sourceTree = "<group>"; };
 		A54E978A266BBF9000C9CE56 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		A551134F26729CAB00BE5C56 /* StateExplanationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateExplanationViewController.swift; sourceTree = "<group>"; };
 		A5633EE7266CD00900AD9528 /* SingletoneExplanation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletoneExplanation.swift; sourceTree = "<group>"; };
 		A5633EEB266CD4C900AD9528 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A5633EEE266CD88A00AD9528 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
@@ -228,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				A54E975C266B78AD00C9CE56 /* AuthorizationViewController.swift */,
+				A54E6E65267D3B6E00D9DB54 /* AuthorizationViewController + UI.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				A54E9776266B90FE00C9CE56 /* HomeViewController.swift */,
+				A54E6E68267D3CEE00D9DB54 /* HomeViewController + UI.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -281,6 +293,7 @@
 			children = (
 				A5633EE6266CCFED00AD9528 /* Explanation Text */,
 				A54E9786266BA7CE00C9CE56 /* SingletonExplanationViewController.swift */,
+				A54E6E6B267D3E9A00D9DB54 /* SingletonExplanationViewController + UI.swift */,
 			);
 			path = "Explanation Screen";
 			sourceTree = "<group>";
@@ -291,6 +304,23 @@
 				A54E978A266BBF9000C9CE56 /* AlertFactory.swift */,
 			);
 			path = Fabrics;
+			sourceTree = "<group>";
+		};
+		A551134C26729C5A00BE5C56 /* Search Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A56C0BC326715A5B006AA173 /* Controller */,
+				A56C0BC426715A66006AA173 /* Presenter */,
+			);
+			path = "Search Screen";
+			sourceTree = "<group>";
+		};
+		A551134D26729C6F00BE5C56 /* Explanation Screen */ = {
+			isa = PBXGroup;
+			children = (
+				A551134F26729CAB00BE5C56 /* StateExplanationViewController.swift */,
+			);
+			path = "Explanation Screen";
 			sourceTree = "<group>";
 		};
 		A5633EE6266CCFED00AD9528 /* Explanation Text */ = {
@@ -339,8 +369,8 @@
 		A56C0B9726712F9C006AA173 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				A56C0BC426715A66006AA173 /* Presenter */,
-				A56C0BC326715A5B006AA173 /* Controller */,
+				A551134D26729C6F00BE5C56 /* Explanation Screen */,
+				A551134C26729C5A00BE5C56 /* Search Screen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -419,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				A56C0B9826712FEE006AA173 /* SearchMessageViewController.swift */,
+				A54E6E6E267D432800D9DB54 /* SearchMessageViewController + UI.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -540,13 +571,18 @@
 				A54E972C266B6F3C00C9CE56 /* AppDelegate.swift in Sources */,
 				A5633EE8266CD00900AD9528 /* SingletoneExplanation.swift in Sources */,
 				A54E972E266B6F3C00C9CE56 /* SceneDelegate.swift in Sources */,
+				A54E6E6F267D432800D9DB54 /* SearchMessageViewController + UI.swift in Sources */,
 				A56C0BAF2671432E006AA173 /* InitialStateTableViewCell.swift in Sources */,
 				A54E978B266BBF9000C9CE56 /* AlertFactory.swift in Sources */,
 				A56C0BC126715950006AA173 /* NotFoundStateTableViewCell.swift in Sources */,
+				A54E6E69267D3CEE00D9DB54 /* HomeViewController + UI.swift in Sources */,
 				A54E9755266B761B00C9CE56 /* SingletonCoordinator.swift in Sources */,
+				A54E6E66267D3B6E00D9DB54 /* AuthorizationViewController + UI.swift in Sources */,
+				A551135026729CAB00BE5C56 /* StateExplanationViewController.swift in Sources */,
 				A56C0BA126713089006AA173 /* Message.swift in Sources */,
 				A54E9787266BA7CE00C9CE56 /* SingletonExplanationViewController.swift in Sources */,
 				A56C0BBE267157BB006AA173 /* ErrorStateTableViewCell.swift in Sources */,
+				A54E6E6C267D3E9A00D9DB54 /* SingletonExplanationViewController + UI.swift in Sources */,
 				A54E9759266B772500C9CE56 /* CoordinatorConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

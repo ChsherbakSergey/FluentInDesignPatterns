@@ -10,180 +10,32 @@ import UIKit
 final class SingletonExplanationViewController: UIViewController {
     
     //MARK: - UI Elements
-    private lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.backgroundColor = .systemBackground
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        return scrollView
-    }()
+    private lazy var scrollView: UIScrollView = makeScrollView()
+    private lazy var contentView: UIView = makeContentView()
     
-    private lazy var contentView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
+    private lazy var titleLabel: UILabel = makeTitleLabel()
+    private lazy var firstParagraphLabel: UILabel = makeSubParagraphLabel(with: SingletoneExplanation.firstParagraph)
+    private lazy var secondParagraphLabel: UILabel = makeParagraphLabel(with: SingletoneExplanation.secondParagraph)
+    private lazy var thirdParagraphLabel: UILabel = makeSubParagraphLabel(with: SingletoneExplanation.thirdParagraph)
+    private lazy var fourthParagraphLabel: UILabel = makeSubParagraphLabel(with: SingletoneExplanation.fourthParagraph)
     
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Singleton 📦"
-        label.textColor = .tuataraSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 26.0, weight: .semibold))()
-        return label
-    }()
+    private lazy var implementationLabel: UILabel = makeImplementationLabel()
+    private lazy var fifthParagraphLabel: UILabel = makeSubParagraphLabel(with: SingletoneExplanation.fifthParagraph)
+    private lazy var firstImageView: UIImageView = makeImageView(with: SingletoneExplanation.firstImageName, height: 120.0)
     
-    private lazy var firstParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.firstParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
+    private lazy var usageLabel: UILabel = makeUsageLabel()
+    private lazy var sixthParagraphLabel: UILabel = makeSubParagraphLabel(with: SingletoneExplanation.sixthParagraph)
     
-    private lazy var secondParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.secondParagraph
-        label.textColor = .tuataraSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .medium))()
-        label.numberOfLines = 0
-        return label
-    }()
+    private lazy var exampleInAppLabel: UILabel = makeExampleInAppLabel()
+    private lazy var seventhParagraphLabel: UILabel = makeSubParagraphLabel(with: SingletoneExplanation.seventhParagraph)
+    private lazy var secondImageView: UIImageView = makeImageView(with: SingletoneExplanation.secondImageName, height: 360.0)
+    private lazy var thirdImageView: UIImageView = makeImageView(with: SingletoneExplanation.thirdImageName, height: 240.0)
     
-    private lazy var thirdParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.thirdParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
+    private lazy var conclusionLabel: UILabel = makeConclusionLabel()
+    private lazy var conclusionParagraphLabel: UILabel = makeSubParagraphLabel(with:  SingletoneExplanation.conclusionParagraph)
+    private lazy var twitterButton: UIButton = makeTwitterButton()
     
-    private lazy var fourthParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.fourthParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
-    
-    private lazy var implementationLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Implementation 🚀"
-        label.textColor = .tuataraSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 26.0, weight: .semibold))()
-        return label
-    }()
-    
-    private lazy var fifthParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.fifthParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
-    
-    private lazy var firstImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "\(SingletoneExplanation.firstImageName)"))
-        imageView.contentMode = .scaleAspectFit
-        imageView.heightAnchor.constraint(equalToConstant: 120.0).isActive = true
-        return imageView
-    }()
-    
-    private lazy var usageLabel: UILabel = {
-        let label = UILabel()
-        label.text = "When should you use it? ✍🏽"
-        label.textColor = .tuataraSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 26.0, weight: .semibold))()
-        return label
-    }()
-    
-    private lazy var sixthParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.sixthParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
-    
-    private lazy var exmapleInAppLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Now let’s see at an example in this app 📱"
-        label.textColor = .tuataraSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 26.0, weight: .semibold))()
-        label.numberOfLines = 2
-        return label
-    }()
-    
-    private lazy var seventhParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.seventhParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
-    
-    private lazy var secondImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "\(SingletoneExplanation.secondImageName)"))
-        imageView.backgroundColor = .white
-        imageView.contentMode = .scaleAspectFit
-        imageView.heightAnchor.constraint(equalToConstant: 360.0).isActive = true
-        return imageView
-    }()
-    
-    private lazy var thirdImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "\(SingletoneExplanation.thirdImageName)"))
-        imageView.contentMode = .scaleAspectFit
-        imageView.heightAnchor.constraint(equalToConstant: 240.0).isActive = true
-        return imageView
-    }()
-    
-    private lazy var conclusionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Conclusion 🙌🏽"
-        label.textColor = .tuataraSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 26.0, weight: .semibold))()
-        label.numberOfLines = 2
-        return label
-    }()
-    
-    private lazy var conclusionParagraphLabel: UILabel = {
-        let label = UILabel()
-        label.text = SingletoneExplanation.conclusionParagraph
-        label.textColor = .tunderSolid
-        label.font = UIFont.rounded(.systemFont(ofSize: 20.0, weight: .regular))()
-        label.numberOfLines = 0
-        label.setLineSpacing(lineSpacing: 3.0, lineHeightMultiple: 1.0)
-        return label
-    }()
-    
-    private lazy var twitterButton: UIButton = {
-        let button = BounceButton(type: .system)
-        button.setTitle("Twitter", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 16.0, weight: .medium)
-        button.setTitleColor(.twitterSolid, for: .normal)
-        button.heightAnchor.constraint(equalToConstant: 44.0).isActive = true
-        button.addTarget(self, action: #selector(handleTwitterButtonTapped(_:)), for: .touchUpInside)
-        return button
-    }()
-    
-    private lazy var explanationStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, firstParagraphLabel, secondParagraphLabel, thirdParagraphLabel, fourthParagraphLabel, implementationLabel, fifthParagraphLabel, firstImageView, usageLabel, sixthParagraphLabel, exmapleInAppLabel, seventhParagraphLabel, secondImageView, thirdImageView, conclusionLabel, conclusionParagraphLabel, twitterButton])
-        stackView.axis = .vertical
-        stackView.spacing = 16.0
-        stackView.alignment = .leading
-        stackView.distribution = .fill
-        return stackView
-    }()
+    private lazy var explanationStackView: UIStackView = makeExplanationTextView(arrangedSubviews: [titleLabel, firstParagraphLabel, secondParagraphLabel, thirdParagraphLabel, fourthParagraphLabel, implementationLabel, fifthParagraphLabel, firstImageView, usageLabel, sixthParagraphLabel, exampleInAppLabel, seventhParagraphLabel, secondImageView, thirdImageView, conclusionLabel, conclusionParagraphLabel, twitterButton])
     
     //MARK: - Properties
     weak var coordinator: SingletonCoordinator?
@@ -212,6 +64,7 @@ private extension SingletonExplanationViewController {
         setNavigationBar()
         addViews(into: view)
         layoutViews(in: view)
+        addTargets()
     }
     
     func setNavigationBar() {
@@ -253,5 +106,9 @@ private extension SingletonExplanationViewController {
                                     paddingLeft: 16.0,
                                     paddingBottom: 16.0,
                                     paddingRight: 16.0)
+    }
+    
+    func addTargets() {
+        twitterButton.addTarget(self, action: #selector(handleTwitterButtonTapped(_:)), for: .touchUpInside)
     }
 }
