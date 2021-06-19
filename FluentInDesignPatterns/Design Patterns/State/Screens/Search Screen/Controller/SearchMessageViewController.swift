@@ -20,7 +20,7 @@ final class SearchMessageViewController: UIViewController {
     //MARK: - UIElements
     lazy var tableView: UITableView = makeTableView()
     private lazy var searchController: UISearchController = UISearchController()
-    private lazy var explanationButton: UIButton = makeExplanationLabel()
+    private lazy var explanationButton: UIButton = makeExplanationButton()
     
     //MARK: - Properties
     weak var coordinator: StateCoordinator?

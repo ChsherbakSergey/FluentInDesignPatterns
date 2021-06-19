@@ -36,4 +36,20 @@ extension UIColor {
             return UIColor.rgb(red: 28.0, green: 160.0, blue: 242.0)
         }
     }
+    
+    static var bumbleSolid = UIColor { (collection) -> UIColor in
+        if collection.userInterfaceStyle == .dark {
+            return UIColor.rgb(red: 254.0, green: 202.0, blue: 54.0)
+        } else {
+            return UIColor.rgb(red: 254.0, green: 202.0, blue: 54.0)
+        }
+    }
+    
+    static var earlyDawn = UIColor { (collection) -> UIColor in
+        if collection.userInterfaceStyle == .dark {
+            return UIColor.rgb(red: 255.0, green: 248.0, blue: 231.0)
+        } else {
+            return UIColor.rgb(red: 255.0, green: 248.0, blue: 231.0)
+        }
+    }
 }

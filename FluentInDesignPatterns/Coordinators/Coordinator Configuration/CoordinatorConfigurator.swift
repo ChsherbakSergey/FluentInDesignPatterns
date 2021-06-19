@@ -20,6 +20,8 @@ final class CoordinatorConfigurator {
         return SingletonCoordinator(navigationController: navigationController)
         #elseif STATE
         return StateCoordinator(navigationController: navigationController)
+        #elseif STRATEGY
+        return StrategyCoordinator(navigationController: navigationController)
         #else
         return MainCoordinator(navigationController: navigationController)
         #endif

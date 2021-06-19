@@ -9,11 +9,11 @@ import UIKit
 
 extension UIViewController {
     
-    func showSnackAlert(with emoji: String? = nil, text: String? = nil) {
+    func showSnackAlert(with emoji: String? = nil, text: String? = nil, textColor: UIColor = .systemBackground, backgroundColor: UIColor = UIColor.label.withAlphaComponent(0.95)) {
         
         let snackView = UIView()
         snackView.alpha = 0.0
-        snackView.backgroundColor = UIColor.label.withAlphaComponent(0.95)
+        snackView.backgroundColor = backgroundColor
         snackView.layer.cornerRadius = 20.0
         snackView.setDimensions(width: 160.0, height: 160.0)
         
@@ -28,7 +28,7 @@ extension UIViewController {
         
         let titleLabel = UILabel()
         titleLabel.text = text
-        titleLabel.textColor = .systemBackground
+        titleLabel.textColor = textColor
         titleLabel.textAlignment = .center
         titleLabel.font = .systemFont(ofSize: 20.0, weight: .semibold)
         titleLabel.numberOfLines = 2

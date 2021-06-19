@@ -21,7 +21,7 @@ internal extension SearchMessageViewController {
         return tableView
     }
     
-    func makeExplanationLabel() -> UIButton {
+    func makeExplanationButton() -> UIButton {
         let button = BounceButton(type: .system)
         button.setImage(UIImage(systemName: "questionmark"), for: .normal)
         button.tintColor = .white

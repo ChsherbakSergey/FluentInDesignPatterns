@@ -58,7 +58,7 @@ private extension HomeViewController {
     }
     
     @objc func handleLogOutButtonTapped(_ sender: UIButton) {
-        let alert = AlertFactory.showAlertWithButton(title: "Are you sure you want to log out?", buttonTitle: "Yes", buttonStyle: .destructive) { [weak self] (_) in
+        let alert = AlertFactory.showAlertWithCustomButton(title: "Are you sure you want to log out?", buttonTitle: "Yes", buttonStyle: .destructive) { [weak self] (_) in
             UserDefaults.standard.setValue(false, forKey: "isSignedIn")
             self?.coordinator?.start()
         }
