@@ -24,6 +24,7 @@ final class SelectQuestionsViewController: UIViewController {
     }
 }
 
+//MARK: - UI
 private extension SelectQuestionsViewController {
     
     func setInitialUI() {

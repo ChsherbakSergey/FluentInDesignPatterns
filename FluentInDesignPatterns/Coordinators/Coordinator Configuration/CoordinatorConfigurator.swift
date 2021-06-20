@@ -22,6 +22,8 @@ final class CoordinatorConfigurator {
         return StateCoordinator(navigationController: navigationController)
         #elseif STRATEGY
         return StrategyCoordinator(navigationController: navigationController)
+        #elseif BUILDER
+        return BuilderCoordinator(navigationController: navigationController)
         #else
         return MainCoordinator(navigationController: navigationController)
         #endif

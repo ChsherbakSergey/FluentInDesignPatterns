@@ -9,6 +9,9 @@ import Foundation
 
 struct URLConstants {
     
-    //MARK: - Sicial Media
+    //MARK: - Social Media
     static let twitterURL = "https://twitter.com/SChsherbak"
+    
+    //MARK: - Builder
+    static let peopleInSpaceURL: URL? = URL(string: "http://api.open-notify.org/astros.json")
 }

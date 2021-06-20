@@ -20,6 +20,7 @@ final class QuestionViewController: UIViewController {
     weak var coordinator: StrategyCoordinator?
     private var strategy: QuestionStrategy
     
+    //MARK: - Init(-s)
     init(strategy: QuestionStrategy) {
         self.strategy = strategy
         super.init(nibName: nil, bundle: nil)
